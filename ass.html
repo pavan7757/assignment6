@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+       
+let marks = parseFloat(prompt("Enter your marks (out of 100):"));
+
+
+if (isNaN(marks)) {
+    alert("Please enter a valid number");
+} else if (marks < 0 || marks > 100) {
+    alert("Marks should be between 0 and 100");
+} else {
+    let grade, message;
+    
+    
+    let gradeRange;
+    if (marks >= 90) gradeRange = "A";
+    else if (marks >= 75) gradeRange = "B";
+    else if (marks >= 60) gradeRange = "C";
+    else if (marks >= 40) gradeRange = "D";
+    else gradeRange = "F";
+    
+   
+    switch(gradeRange) {
+        case "A":
+            message = "Excellent!";
+            break;
+        case "B":
+            message = "Great job!";
+            break;
+        case "C":
+            message = "Good effort.";
+            break;
+        case "D":
+            message = "You passed.";
+            break;
+        case "F":
+            message = "Better luck next time.";
+            break;
+    }
+    
+   
+    alert(`Grade: ${gradeRange}\n${message}`);
+}
+    </script>
+    
+</body>
+</html>
